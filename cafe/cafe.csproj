@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Controller\Connection.cs" />
     <Compile Include="Model\Usuario.cs" />
+    <Compile Include="Model\UsuarioDAO.cs" />
     <Compile Include="View\Tela_Usuário.cs">
       <SubType>Form</SubType>
     </Compile>

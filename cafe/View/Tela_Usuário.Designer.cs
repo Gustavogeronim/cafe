@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_Usuário));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txb_senha = new System.Windows.Forms.TextBox();
+            this.txb_Login = new System.Windows.Forms.TextBox();
+            this.txbCPF = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.txbPass = new System.Windows.Forms.TextBox();
+            this.txb_tel = new System.Windows.Forms.TextBox();
             this.txbUser = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,15 +48,15 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txb_senha);
+            this.panel2.Controls.Add(this.txb_Login);
+            this.panel2.Controls.Add(this.txbCPF);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.txbPass);
+            this.panel2.Controls.Add(this.txb_tel);
             this.panel2.Controls.Add(this.txbUser);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
@@ -66,26 +66,26 @@
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // textBox3
+            // txb_senha
             // 
-            this.textBox3.Location = new System.Drawing.Point(82, 299);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 12;
+            this.txb_senha.Location = new System.Drawing.Point(82, 299);
+            this.txb_senha.Name = "txb_senha";
+            this.txb_senha.Size = new System.Drawing.Size(100, 20);
+            this.txb_senha.TabIndex = 12;
             // 
-            // textBox2
+            // txb_Login
             // 
-            this.textBox2.Location = new System.Drawing.Point(82, 269);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 11;
+            this.txb_Login.Location = new System.Drawing.Point(82, 269);
+            this.txb_Login.Name = "txb_Login";
+            this.txb_Login.Size = new System.Drawing.Size(100, 20);
+            this.txb_Login.TabIndex = 11;
             // 
-            // textBox1
+            // txbCPF
             // 
-            this.textBox1.Location = new System.Drawing.Point(82, 240);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 10;
+            this.txbCPF.Location = new System.Drawing.Point(82, 240);
+            this.txbCPF.Name = "txbCPF";
+            this.txbCPF.Size = new System.Drawing.Size(100, 20);
+            this.txbCPF.TabIndex = 10;
             // 
             // label6
             // 
@@ -134,16 +134,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txbPass
+            // txb_tel
             // 
-            this.txbPass.Location = new System.Drawing.Point(82, 212);
-            this.txbPass.Name = "txbPass";
-            this.txbPass.Size = new System.Drawing.Size(100, 20);
-            this.txbPass.TabIndex = 3;
+            this.txb_tel.Location = new System.Drawing.Point(82, 212);
+            this.txb_tel.Name = "txb_tel";
+            this.txb_tel.Size = new System.Drawing.Size(100, 20);
+            this.txb_tel.TabIndex = 3;
             // 
             // txbUser
             // 
-            this.txbUser.Location = new System.Drawing.Point(82, 182);
+            this.txbUser.Location = new System.Drawing.Point(82, 186);
             this.txbUser.Name = "txbUser";
             this.txbUser.Size = new System.Drawing.Size(100, 20);
             this.txbUser.TabIndex = 2;
@@ -186,15 +186,15 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txb_senha;
+        private System.Windows.Forms.TextBox txb_Login;
+        private System.Windows.Forms.TextBox txbCPF;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txbPass;
+        private System.Windows.Forms.TextBox txb_tel;
         private System.Windows.Forms.TextBox txbUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

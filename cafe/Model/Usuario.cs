@@ -16,10 +16,16 @@ namespace cafe.Model
         public string Nome_Login { get; set; }
         public string Senha {  get; set; }
 
-        public Usuario(int idusuario,
-            string nome, string telefone, string cpf, string nome_login, string senha)
+        public Usuario(int idusuario, string nome, string telefone, string cpf, string nome_login, string senha):this(nome, telefone, 
+            cpf, nome_login, senha)
         {
             IDusuario = idusuario;
+        }
+        public Usuario(
+            string nome, string telefone, string cpf, string nome_login, string senha)
+
+        {
+
             Nome = nome;
             Telefone = telefone;
             CPF = cpf;
