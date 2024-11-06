@@ -32,5 +32,12 @@ namespace cafe.Model
             Nome_Login = nome_login;
             Senha = senha;
         }
+
+        public Usuario(string nome_Login, string senha)
+        {
+            Nome_Login = nome_Login;
+            Senha = senha;
+        }
+
     }
 }

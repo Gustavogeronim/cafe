@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cafe.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +21,10 @@ namespace cafe
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txbUser.Text == "admin" && txbPass.Text == "12345")
+            Usuario usuario = new Usuario(txbUser.Text, txbPass.Text);
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            if (usuarioDAO.Verificarlogin(usuario))
+                
             {
                 txbUser.Text = String.Empty; // Limpa o campo do usúario
                 txbPass.Text = String.Empty; // Limpa o campo de senha

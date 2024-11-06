@@ -43,7 +43,7 @@ namespace cafe.Model
                     "cadastro no banco.\n" + err.Message);
             }
             finally
-            {
+            { 
                 Connect.CloseConnection();
             }
         }
@@ -51,6 +51,7 @@ namespace cafe.Model
         public void Atualizar(Usuario usuarioAtualizado)
         {
             Command.Connection = Connect.ReturnConnection();
+
             Command.CommandText = @"UPDATE Usuario SET Nome = @nome, Telefone = @tel,
     CPF = @cpf, Nome_Login = @nome_login, Senha = @senha 
     WHERE IDusuario = @id";
@@ -128,6 +129,36 @@ namespace cafe.Model
             }
 
             return listaDeUsuarios;
+        }
+        public bool Verificarlogin(Usuario usuario)
+        {
+
+            Command.Connection = Connect.ReturnConnection();
+            Command.CommandText = "SELECT * FROM Usuario where Nome_Login =@login AND Senha = @senha";
+            Command.Parameters.AddWithValue("@login", usuario.Nome_Login);
+            Command.Parameters.AddWithValue("@senha", usuario.Senha);
+
+            try
+            {
+                SqlDataReader rd = Command.ExecuteReader();
+
+                if (rd.HasRows)
+                {
+                    rd.Close();
+                    return true;
+                }
+
+            }
+            catch (Exception err)
+            {
+                throw new Exception("Erro: Problemas ao realizar leitura de usuários no banco.\n" + err.Message);
+            }
+            finally
+            {
+                Connect.CloseConnection();
+            }
+
+            return false;
         }
     }
 }
