@@ -98,7 +98,7 @@ namespace cafe.Model
         {
 
             Command.Connection = Connect.ReturnConnection();
-            Command.CommandText = "SELECT * FROM Usuarios";
+            Command.CommandText = "SELECT * FROM Usuario";
 
             List<Usuario> listaDeUsuarios = new List<Usuario>(); //Instancia a lista com o tamanho padrão.
             try
