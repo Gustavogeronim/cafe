@@ -42,6 +42,15 @@
             this.txbUser = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.listUsuario = new System.Windows.Forms.ListView();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.clmID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmNm = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmtl = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmcp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmlo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmse = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -60,9 +69,9 @@
             this.panel2.Controls.Add(this.txbUser);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(92, 28);
+            this.panel2.Location = new System.Drawing.Point(26, 27);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(320, 392);
+            this.panel2.Size = new System.Drawing.Size(253, 392);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -126,7 +135,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(204, 357);
+            this.button1.Location = new System.Drawing.Point(125, 350);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 23);
             this.button1.TabIndex = 4;
@@ -166,6 +175,68 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
             // 
+            // listUsuario
+            // 
+            this.listUsuario.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clmID,
+            this.clmNm,
+            this.clmtl,
+            this.clmcp,
+            this.clmlo,
+            this.clmse});
+            this.listUsuario.HideSelection = false;
+            this.listUsuario.Location = new System.Drawing.Point(299, 136);
+            this.listUsuario.Name = "listUsuario";
+            this.listUsuario.Size = new System.Drawing.Size(466, 210);
+            this.listUsuario.TabIndex = 3;
+            this.listUsuario.UseCompatibleStateImageBehavior = false;
+            this.listUsuario.View = System.Windows.Forms.View.Details;
+            this.listUsuario.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listUsuario_MouseDoubleClick);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(368, 377);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(113, 42);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Apagar";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(574, 378);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(113, 41);
+            this.btnUpdate.TabIndex = 5;
+            this.btnUpdate.Text = "Atualizar";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
+            // 
+            // clmID
+            // 
+            this.clmID.Text = "ID";
+            // 
+            // clmNm
+            // 
+            this.clmNm.Text = "Nome";
+            // 
+            // clmtl
+            // 
+            this.clmtl.Text = "Telefone";
+            // 
+            // clmcp
+            // 
+            this.clmcp.Text = "CPF";
+            // 
+            // clmlo
+            // 
+            this.clmlo.Text = "Login";
+            // 
+            // clmse
+            // 
+            this.clmse.Text = "Senha";
+            // 
             // Tela_Usuário
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,9 +244,13 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.listUsuario);
             this.Controls.Add(this.panel2);
             this.Name = "Tela_Usuário";
             this.Text = "Tela_Usuário";
+            this.Load += new System.EventHandler(this.Tela_Usuário_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -198,5 +273,14 @@
         private System.Windows.Forms.TextBox txbUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListView listUsuario;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.ColumnHeader clmID;
+        private System.Windows.Forms.ColumnHeader clmNm;
+        private System.Windows.Forms.ColumnHeader clmtl;
+        private System.Windows.Forms.ColumnHeader clmcp;
+        private System.Windows.Forms.ColumnHeader clmlo;
+        private System.Windows.Forms.ColumnHeader clmse;
     }
 }

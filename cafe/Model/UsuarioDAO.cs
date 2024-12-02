@@ -83,7 +83,8 @@ namespace cafe.Model
             Command.Parameters.AddWithValue("@id", idUsuario);
             try
             {
-                Command.ExecuteNonQuery();
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0; // retorna true se um usuario foi excluido
             }
             catch (Exception err)
             {
@@ -98,7 +99,7 @@ namespace cafe.Model
         {
 
             Command.Connection = Connect.ReturnConnection();
-            Command.CommandText = "SELECT * FROM Usuarios";
+            Command.CommandText = "SELECT * FROM Usuario";
 
             List<Usuario> listaDeUsuarios = new List<Usuario>(); //Instancia a lista com o tamanho padrão.
             try
