@@ -20,7 +20,7 @@ namespace cafe
             InitializeComponent();
         }
 
-        //Metodo para limpar Campos
+        // Metodo para limpar Campos
         private void ClearFields()
         {
             txbUser.Clear();
@@ -43,7 +43,6 @@ namespace cafe
             return true;
         }
 
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             panel2.BackColor = Color.FromArgb(75, Color.Gray);
@@ -57,23 +56,21 @@ namespace cafe
             string nome_login = txb_Login.Text;
             string senha = txb_senha.Text;
 
-
-            //cria objeto do tipo da entidade manipulada.
+            // cria objeto do tipo da entidade manipulada
             Usuario usuario = new Usuario(nome, telefone, cpf, nome_login, senha);
 
-            //cria objeto para interação com o banco de dados.
+            // cria objeto para interação com o banco de dados
             UsuarioDAO usuarioDAO = new UsuarioDAO();
 
-            //chama o insert
+            // chama o insert
             usuarioDAO.Insert(usuario);
-                 
 
-         
             MessageBox.Show("LOGIN CONCLUÍDO",
                 "CONCLUÍDO",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Asterisk);
 
+            UpdateListView();
         }
 
         private void Tela_Usuário_Load(object sender, EventArgs e)
@@ -88,24 +85,24 @@ namespace cafe
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             List<Usuario> usuarios = usuarioDAO.ListarTodosUsuarios();
 
-            //This code part access all brokers received from database and iterate by them.
+            // Este código acessa todos os usuários recebidos do banco de dados e itera sobre eles
             foreach (Usuario usuario in usuarios)
             {
-                //Creating a fully line of listview with items from database.
+                // Criando uma linha completa do listView com itens do banco de dados
                 ListViewItem item = new ListViewItem(usuario.IDusuario.ToString());
                 item.SubItems.Add(usuario.Nome);
                 item.SubItems.Add(usuario.Telefone);
                 item.SubItems.Add(usuario.CPF);
                 item.SubItems.Add(usuario.Nome_Login);
                 item.SubItems.Add(usuario.Senha);
-                //Adding the fully line to the listview.
+                // Adicionando a linha completa ao listView
                 listUsuario.Items.Add(item);
             }
         }
 
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
-            UsuarioDAO brokerDao = new UsuarioDAO();
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
 
             DialogResult resultado = MessageBox.Show("Tem certeza" +
             " que deseja excluir?", "CONFIRMAÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -113,7 +110,7 @@ namespace cafe
             {
                 try
                 {
-                    brokerDao.Excluir(Id);
+                    usuarioDAO.Excluir(Id);
                 }
                 catch (Exception err)
                 {
@@ -124,18 +121,17 @@ namespace cafe
             }
         }
 
-
         private void btnUpdate_Click_1(object sender, EventArgs e)
         {
             if (ValidateFields())
             {
                 try
                 {
-                    //Capture inputed text from fields.
+                    // Captura o texto dos campos
                     new UsuarioDAO().Atualizar(new Usuario(
-                        txbUser.Text, txb_tel.Text, txbCPF.Text, 
+                        Id, txbUser.Text, txb_tel.Text, txbCPF.Text,
                         txb_Login.Text, txb_senha.Text));
-                    MessageBox.Show("Usuario atualizado!", "SUCESSO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Usuário atualizado!", "SUCESSO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception error)
                 {
@@ -146,12 +142,13 @@ namespace cafe
             }
         }
 
-        private void listUsuario_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void listUsuario_MouseClick(object sender, MouseEventArgs e)
         {
             int index;
             try
             {
                 index = listUsuario.FocusedItem.Index;
+                Id = int.Parse(listUsuario.Items[index].SubItems[0].Text); // Captura o ID do usuário
                 txbUser.Text = listUsuario.Items[index].SubItems[1].Text;
                 txb_tel.Text = listUsuario.Items[index].SubItems[2].Text;
                 txbCPF.Text = listUsuario.Items[index].SubItems[3].Text;
@@ -162,7 +159,6 @@ namespace cafe
                 btnUpdate.Visible = true;
 
             }
-
             catch (Exception)
             {
                 MessageBox.Show("Você precisa selecionar uma linha", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -170,7 +166,3 @@ namespace cafe
         }
     }
 }
-        
-
-    
-

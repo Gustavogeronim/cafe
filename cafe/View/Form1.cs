@@ -23,16 +23,15 @@ namespace cafe
         {
             Usuario usuario = new Usuario(txbUser.Text, txbPass.Text);
             UsuarioDAO usuarioDAO = new UsuarioDAO();
-            if (usuarioDAO.Verificarlogin(usuario))
-                
+            if (usuarioDAO.VerificarLogin(usuario))
             {
                 txbUser.Text = String.Empty; // Limpa o campo do usúario
                 txbPass.Text = String.Empty; // Limpa o campo de senha
                 txbUser.Focus(); // Coloca o foco no campo do usúario
-                Tela_Principal principal = new Tela_Principal();
-                this.Visible = false; // esconder a tela de login
-                principal.ShowDialog(); // Abre a tela principal
-                this.Visible = true; // Volta a mostrar a tela de login
+                this.Hide(); // Esconder o Form1
+                Tela_Usuário telaUsuario = new Tela_Usuário();
+                telaUsuario.ShowDialog(); // Abre a tela de usuários
+                this.Show(); // Mostrar o Form1 após fechar a tela de usuários
             }
             else
             {
