@@ -37,26 +37,29 @@
             this.panel1.Controls.Add(this.txbUser);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(291, 67);
+            this.panel1.Location = new System.Drawing.Point(388, 82);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(201, 315);
+            this.panel1.Size = new System.Drawing.Size(268, 388);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(49, 48);
+            this.pictureBox1.Location = new System.Drawing.Point(65, 59);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 93);
+            this.pictureBox1.Size = new System.Drawing.Size(133, 114);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(66, 265);
+            this.button1.Location = new System.Drawing.Point(107, 313);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 4;
             this.button1.Text = "ENTRAR";
             this.button1.UseVisualStyleBackColor = true;
@@ -64,44 +67,49 @@
             // 
             // txbPass
             // 
-            this.txbPass.Location = new System.Drawing.Point(66, 215);
+            this.txbPass.Location = new System.Drawing.Point(82, 265);
+            this.txbPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbPass.Name = "txbPass";
-            this.txbPass.Size = new System.Drawing.Size(100, 20);
+            this.txbPass.Size = new System.Drawing.Size(132, 22);
             this.txbPass.TabIndex = 3;
             // 
             // txbUser
             // 
-            this.txbUser.Location = new System.Drawing.Point(66, 182);
+            this.txbUser.Location = new System.Drawing.Point(82, 225);
+            this.txbUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbUser.Name = "txbUser";
-            this.txbUser.Size = new System.Drawing.Size(100, 20);
+            this.txbUser.Size = new System.Drawing.Size(132, 22);
             this.txbUser.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 215);
+            this.label2.Location = new System.Drawing.Point(25, 265);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.Size = new System.Drawing.Size(49, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Senha:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 185);
+            this.label1.Location = new System.Drawing.Point(25, 228);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(57, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuário:";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
