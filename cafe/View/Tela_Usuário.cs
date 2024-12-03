@@ -99,7 +99,7 @@ namespace cafe
                 listUsuario.Items.Add(item);
             }
         }
-
+        //botão apagar
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
